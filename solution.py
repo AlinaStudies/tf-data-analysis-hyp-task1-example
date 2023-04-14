@@ -11,5 +11,5 @@ def solution(x_success: int,
     alpha = 0.1
     successes = [x_success, y_success]
     cnts = [x_cnt, y_cnt]
-    _, pval = proportions_ztest(count=successes, nobs=cnts, alternative='smaller')
+    _, pval = proportions_ztest(count=successes, nobs=cnts, alternative='larger')
     return pval < alpha
